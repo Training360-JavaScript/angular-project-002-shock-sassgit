@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-12 mb-1 pt-1 pb-1 d-flex justify-content-between">
+    <app-data-cell *ngFor="let key of keys"
+    [data]="dataRow" [key]="key"
+    ></app-data-cell>
+    <app-action-button-group
+      (selectClick)="onSelectClicked()"
+      (updateClick)="onUpdateClicked()"
+      (deleteClick)="onDeleteClicked()"
+    ></app-action-button-group>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-12 mt-3 pt-1 pb-1 d-flex justify-content-around">
+    <span class="text-bold" *ngFor="let key of keys"  >{{ key }}</span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 mt-1 data-list-row">
+    <app-data-row *ngFor="let row of dataList"
+      [dataRow]="row"
+      (selectClick)="onSelectClick($event)"
+      (updateClick)="onUpdateClick($event)"
+      (deleteClick)="onDeleteClick($event)"
+    ></app-data-row>
+  </div>
+</div>
